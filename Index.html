@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="bg_img"></div>
+      <form class="form game-start_form" onsubmit="startGame(event)">
+        <div class="input-wrapper">
+          <p><b>*</b>Игроков</p>
+          <input class="input players-count_inpt" type="number" value="2" />
+        </div>
+        <div class="input-wrapper">
+          <p><b>*</b>Граней у игральной кости</p>
+          <input class="input cube-size_inpt" type="number" value="6" />
+        </div>
+        <button class="btn start-game_btn" type="submit">Начать игру</button>
+      </form>
+
+      <div class="bar hide">
+        <div class="player-container"></div>
+
+        <div class="game-logger">
+          <p>Ход игрока: <b class="player"></b></p>
+          <button class="btn thorw-cube_btn" onclick="throwCube()">
+            Бросить кость
+          </button>
+
+          <h2>Ход игры:</h2>
+
+          <ul class="game-logger_info"></ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="players-markers"></div>
+
+    <script src="./source.js"></script>
+  </body>
+</html>
